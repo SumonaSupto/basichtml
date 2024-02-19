@@ -1,8 +1,12 @@
 body {
-    background-color: lightblue;
+    background-color:w;
   }
   
   p {
     text-align: center;
     color: blueviolet;
+  }
+  .abc{
+    color: red ;
+
   }
