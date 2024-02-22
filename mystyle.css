@@ -1,12 +1,76 @@
-body {
-    background-color:w;
-  }
-  
-  p {
-    text-align: center;
-    color: blueviolet;
-  }
-  .abc{
-    color: red ;
 
+
+*{
+  padding: 0;
+  margin: 0 ;
+  box-sizing: border-box;
+}
+:root{
+  --primary-color: #ff7613 ;
+  --text-color : #727171 :
+}
+html{
+  font-size: 10px;
+}
+body{
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+}
+/*common style*/
+img{
+  width: 100%;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+/*layouts*/
+.container{
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+padding: 5rem;
+background: #070707;
+grid-template-columns: 1fr 1fr;
+gap: 4rem;
+}
+/* for small device*/
+@media only screen and  (max-width : 768px){
+  .container{
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 3rem;
+    gap: 7rem;
   }
+}
+/*for upper portion*/
+.profile{
+  grid-column: 1/-1;
+  margin-bottom: 2rem;
+}
+/*profile style*/
+.profile_container{
+  display: flex;
+  gap: 2rem;
+}
+.profileImg{
+  width: 250px;
+}
+.first{
+  color: white;
+  font-weight: 200;
+  font-size:  clamp(2rem , 8vw , 4rem);/*minimum and maximum font */
+  text-transform: uppercase;
+  display: block; /*name gose next line*/
+  margin-bottom: -.8rem;
+}
+.second{
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size:  clamp(2.5rem , 15vw , 7rem);/*minimum and maximum font */
+  text-transform: uppercase;
+  display: block;
+}
+
