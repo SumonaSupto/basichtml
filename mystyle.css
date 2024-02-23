@@ -20,7 +20,12 @@ body{
 /*common style for multiple place*/
 img{
   width: 100%;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  border: 3px solid var(--primary-color); 
 }
+
 a{
   text-decoration: none;
   color: white;
@@ -38,6 +43,22 @@ a{
   text-transform: uppercase;
 }
 
+.pretitle{
+  font-size: 1.4rem;
+  color: var(--text-color);
+  font-weight: 300;
+}
+.item_title{
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 500;
+  margin: 0.8rem 0 ;
+}
+.item_subtitle{
+  font-size: 1.4rem;
+  color: var(--text-color);
+  font-weight: 400;
+}
 /*layouts*/
 .container{
   max-width: 1000px;
@@ -49,10 +70,30 @@ background: #070707;
 grid-template-columns: 1fr 1fr;
 gap: 4rem;
 }
-.group1{
+.group1 , .group2{
   display: flex;
   flex-direction: column;
   gap: 5rem ;
+}
+.group3{
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+.group3 > div{
+  flex: 1;
+}
+@media only screen and (max-width :768px){
+  .group3{
+    flex-direction: column;
+  }
+  .profile{
+    margin-bottom: 0;
+  }
 }
 /* for small device*/
 @media only screen and  (max-width : 768px){
@@ -124,4 +165,39 @@ gap: 4rem;
 .ref_name{
   font-size: 1.6rem;
   font-weight: 700;
+}
+/*Education*/
+.edu_item{
+  margin-top: 2rem;
+}
+.certi_item{
+  margin-top: 2rem;
+}
+.exp_item{
+  margin-top: 2rem;
+}
+.achi_item {
+  margin-top: 2rem;
+}
+
+/*interes section sliped*/
+
+/*socials*/
+.social_item{
+margin-top: 2rem;
+}
+hr{
+  grid-column: 1/-1;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-top: 2px solid var(--primary-color);
+  
+}
+@media only screen and (max-width:768px){
+  hr{
+    margin: 0 auto;
+  }
 }
