@@ -6,8 +6,8 @@
   box-sizing: border-box;
 }
 :root{
-  --primary-color: #90ee90;
-  --text-color : #ADD8E6 ;
+  --primary-color: #62001F;
+  --text-color : #22033e ;
 }
 html{
   font-size: 10px;
@@ -15,7 +15,7 @@ html{
 body{
   font-family: sans-serif;
   background-color: black;
-  color: white;
+  color: #a81717;
 }
 /*common style for multiple place*/
 img{
@@ -28,7 +28,7 @@ img{
 
 a{
   text-decoration: none;
-  color: white;
+  color: #a81717;
 }
 .about{
   margin-top: 1rem;
@@ -46,12 +46,14 @@ a{
 .pretitle{
   font-size: 1.4rem;
   color: var(--text-color);
-  font-weight: 300;
+  font-weight: bold;
+  margin-top: 2rem;
+  
 }
 .item_title{
   font-size: 1.6rem;
-  color: white;
-  font-weight: 500;
+  color: #a81717;
+  font-weight: 700;
   margin: 0.8rem 0 ;
 }
 .item_subtitle{
@@ -66,7 +68,7 @@ a{
   margin: 0 auto;
   display: grid;
 padding: 5rem;
-background: #070707;
+background:#F7F7DD;
 grid-template-columns: 1fr 1fr;
 gap: 4rem;
 }
@@ -118,7 +120,7 @@ gap: 4rem;
   width: 250px;
 }
 .first{
-  color: white;
+  color: #a81717;
   font-weight: 200;
   font-size:  clamp(2rem , 8vw , 4rem);/*minimum and maximum font */
   text-transform: uppercase;
@@ -144,7 +146,7 @@ gap: 4rem;
   margin-top: 1rem;
 }
 .downloadbtn:hover{
-  color: var(--primary-color);
+  color: #95D240;
 }
 
 @media only screen and (max-width:768px){
@@ -180,11 +182,45 @@ gap: 4rem;
   margin-top: 2rem;
 }
 
-/*interes section sliped*/
+/*interest*/
+.inter_items{
+  margin-top: 2rem; 
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+}
+
+.inter_item{
+
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--text-color);
+}
+
+i{
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
 
 /*socials*/
-.social_item{
+.social_items{
 margin-top: 2rem;
+}
+.social_item{
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--text-color);
 }
 hr{
   grid-column: 1/-1;
@@ -196,8 +232,35 @@ hr{
   border-top: 2px solid var(--primary-color);
   
 }
+.social_item:hover{
+  color: #95D240;
+}
 @media only screen and (max-width:768px){
   hr{
     margin: 0 auto;
   }
+}
+
+
+/*no break*/
+
+@media print {
+  body {
+    page-break-inside: avoid; /* Prevents page breaks inside elements */
+    overflow: visible;
+  }
+  .no-break {
+    page-break-inside: avoid; /* Prevents page breaks inside this specific element */
+  }
+
+  table, pre, code {
+    page-break-inside: avoid; /* Useful for preventing tables and code blocks from breaking */
+  }
+
+  /* Optional: Set custom page size */
+  @page {
+    size: auto; /* Or specify a fixed size like A4, A3 */
+    margin: 0;  /* Reduce or remove margins */
+  }
+
 }
